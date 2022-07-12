@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/islam/IdeaProjects/TDD_WebAutomationFrameWorkSingleModule/src/test/resources"><classes/></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Etsy Test Suite">
+
+<!--    @Parameters-->
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="url" value="https://www.etsy.com/"></parameter>
+
+    <test name="Etsy Web Automation">
+
+        <classes>
+            <class name="com.etsy.testPages.homePageTest.HomePageTest"/>
+<!--            <class name="com.etsy.testPages.registrationPageTest.RegistrationPageTest"/>-->
+
+
+        </classes>
+
+    </test>
+
+</suite>
