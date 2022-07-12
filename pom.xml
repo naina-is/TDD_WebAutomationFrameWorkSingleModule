@@ -142,7 +142,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
 <!--                    Test Runner Files-->
                     <suiteXmlFiles>
-<!--                        <suiteXmlFile>target</suiteXmlFile>-->
+                        <suiteXmlFile>target/test-classes/EtsyTestRunner.xml</suiteXmlFile>
 
                     </suiteXmlFiles>
                 </configuration>
