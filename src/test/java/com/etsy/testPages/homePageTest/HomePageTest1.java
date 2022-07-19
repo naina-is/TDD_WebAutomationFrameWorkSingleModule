@@ -1,6 +1,8 @@
 package com.etsy.testPages.homePageTest;
 
 import com.etsy.pages.HomePage;
+import com.etsy.pages.HomePage1;
+import com.etsy.pages.HomePage2;
 import configuration.common.WebTestBase;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -9,12 +11,12 @@ import org.testng.annotations.Test;
 import static com.etsy.pageElement.HomePageElements.*;
 import static com.etsy.pages.HomePage.*;
 
-public class HomePageTest extends WebTestBase {
+public class HomePageTest1 extends WebTestBase {
 
     @Test(enabled = false)
     public static void verifySearchProductUsingInvalidProduct(){
-        HomePage homePage = new HomePage();
-        homePage.searchInvalidProduct();
+        HomePage2 homePage2 = new HomePage2();
+        homePage2.searchInvalidProduct();
 //        searchInvalidProduct();
         String expectedProductName="We couldn't find any results for 23124MSNADN!!~#@$#";
         String actualProductName= driver.findElement(By.xpath(verifyInvalidSearchedProductWebElement)).getText();

@@ -7,15 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import static com.etsy.pageElement.HomePageElements.*;
 
-public class HomePage extends WebTestBase {
+public class HomePage1 extends WebTestBase {
 //    Action class for business flow
-    public HomePage(){
+    public HomePage1(WebDriver driver){
 //        To Instantiate the driver when there is a null point exception
-    PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver,this);
     }
 //    This method tests if the searchbox functionality works when an invalid product is searched
     public void searchInvalidProduct1(){

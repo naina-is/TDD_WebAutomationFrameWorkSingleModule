@@ -2,18 +2,16 @@ package com.etsy.pages;
 
 import configuration.common.WebTestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import static com.etsy.pageElement.HomePageElements.*;
 
-public class HomePage extends WebTestBase {
+public class HomePage2 extends WebTestBase {
 //    Action class for business flow
-    public HomePage(){
+    public HomePage2(){
 //        To Instantiate the driver when there is a null point exception
     PageFactory.initElements(driver,this);
     }

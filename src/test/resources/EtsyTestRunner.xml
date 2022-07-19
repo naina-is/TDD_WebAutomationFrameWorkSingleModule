@@ -9,9 +9,11 @@
     <test name="Etsy Web Automation">
 
         <classes>
-            <class name="com.etsy.testPages.homePageTest.HomePageTest"/>
-<!--            <class name="com.etsy.testPages.registrationPageTest.RegistrationPageTest"/>-->
 
+<!--            <class name="com.etsy.testPages.homePageTest.HomePageTest"/>-->
+<!--            <class name="com.etsy.testPages.homePageTest.HomePageTest1"/>-->
+            <class name="com.etsy.testPages.homePageTest.HomePageTest2"/>
+<!--            <class name="com.etsy.testPages.registrationPageTest.RegistrationPageTest"/>-->
 
         </classes>
 

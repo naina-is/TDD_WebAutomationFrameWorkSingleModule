@@ -1,20 +1,29 @@
 package com.etsy.testPages.homePageTest;
 
 import com.etsy.pages.HomePage;
+import com.etsy.pages.HomePage2;
 import configuration.common.WebTestBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.etsy.pageElement.HomePageElements.*;
 import static com.etsy.pages.HomePage.*;
 
-public class HomePageTest extends WebTestBase {
+public class HomePageTest2 extends WebTestBase {
 
-    @Test(enabled = false)
+    static HomePage2 homePage2;
+    @BeforeMethod
+    public void getInit(){
+        homePage2 = PageFactory.initElements(driver,HomePage2.class);
+    }
+
+    @Test
     public static void verifySearchProductUsingInvalidProduct(){
-        HomePage homePage = new HomePage();
-        homePage.searchInvalidProduct();
+//        HomePage2 homePage2 = new HomePage2();
+        homePage2.searchInvalidProduct();
 //        searchInvalidProduct();
         String expectedProductName="We couldn't find any results for 23124MSNADN!!~#@$#";
         String actualProductName= driver.findElement(By.xpath(verifyInvalidSearchedProductWebElement)).getText();
@@ -23,9 +32,9 @@ public class HomePageTest extends WebTestBase {
         Assert.assertEquals(actualProductName,expectedProductName,"Product name matches successfully");
     }
 
-    @Test(enabled = false)
+    @Test
     public static void verifyRegisteredUserSignedIn() throws InterruptedException {
-        SignInValidUser();
+        homePage2.SignInValidUser();
         String actualWelcomeMessage = driver.findElement(By.cssSelector(verifyRegisteredUserSignedInWelcomeMessage)).getText();
         String expectedWelcomeMessage = "Welcome back, Naina!";
         printLog("Expected Result: " + expectedWelcomeMessage);

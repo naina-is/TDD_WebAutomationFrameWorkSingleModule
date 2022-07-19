@@ -1,5 +1,9 @@
 package com.etsy.pageElement;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
 public class HomePageElements {
 //    Web element class to keep all the locators of this page
 
@@ -52,6 +56,9 @@ public class HomePageElements {
     public static final String allFiltersButtonWebElement = "button#search-filter-button";
     public static final String freeShippingCheckboxWebElement = "#search-filter-form > div > div.main-filters > div:nth-child(2) > fieldset > div > div > div:nth-child(1) > div > label";
     public static final String verifyFreeShippingFilterisAppliedWebElement = "#content > div > div.wt-bg-white.wt-grid__item-md-12.wt-pl-xs-1.wt-pr-xs-0.wt-pr-md-1.wt-pl-lg-0.wt-pr-lg-0.wt-bb-xs-1 > div > div.wt-mt-xs-3.wt-text-black > div.wt-grid.wt-pl-xs-0.wt-pr-xs-1.search-listings-group > div:nth-child(4) > div:nth-child(8) > ul > li > ul > li > a";
+
+
+
 
 
 }
