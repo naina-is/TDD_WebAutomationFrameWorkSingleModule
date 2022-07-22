@@ -6,8 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.etsy.pageElement.HomePageElements.*;
+import static configuration.utilities.DataDriven.getItemValue;
 
 public class HomePage2 extends WebTestBase {
 //    Action class for business flow
@@ -19,6 +24,34 @@ public class HomePage2 extends WebTestBase {
     public void searchInvalidProduct1(){
         driver.findElement(By.xpath(searchBoxWebElement)).sendKeys("23124MSNADN!!~#@$#");
         driver.findElement(By.xpath(searchButtonWebElement)).click();
+    }
+
+    public static List<String> getExpectedProducts() {
+        List<String> itemsList = new ArrayList<String>();
+        itemsList.add("$#$#!!!!");
+        itemsList.add(")))$#$--1");
+        itemsList.add("##@^^@##");
+        itemsList.add("%%#$#$))");
+        itemsList.add("!@!@!@#@$#@$<>>");
+        itemsList.add("$@#@???");
+        itemsList.add("#$$&#&$#");
+        itemsList.add("@!#@#$#$//");
+        return itemsList;
+    }
+
+//    Data Driven Approach
+    public void searchInvalidProduct2(){
+        getExpectedProducts();
+        for (String st:getItemValue()){
+            searchBox.clear();
+            searchBox.sendKeys(st);
+            searchButton.click();
+            String expectedProductName="We couldn't find any results for " + st;
+            String actualProductName= driver.findElement(By.xpath(verifyInvalidSearchedProductWebElement)).getText();
+            printLog("Actual Result: " + actualProductName);
+            printLog("Expected Result: " + expectedProductName);
+            Assert.assertEquals(actualProductName,expectedProductName,"Product name matches successfully");
+        }
     }
 
     //    Modern Approach: @FindBy with how

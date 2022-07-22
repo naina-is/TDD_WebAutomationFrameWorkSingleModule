@@ -1,0 +1,5 @@
+com\etsy\pageElement\HomePageElements.class
+configuration\common\WebTestBase.class
+com\etsy\pages\HomePage.class
+com\etsy\pages\HomePage1.class
+com\etsy\pages\HomePage2.class

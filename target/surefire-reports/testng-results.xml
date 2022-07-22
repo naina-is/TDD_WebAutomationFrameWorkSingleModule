@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="0" failed="0" skipped="1">
   <reporter-output>
+    <line>
+      <![CDATA[******************* Automation Started ********************]]>
+    </line>
     <line>
       <![CDATA[Browser: chrome]]>
     </line>
@@ -8,28 +11,109 @@
       <![CDATA[URL: https://www.etsy.com/]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-07-16T11:20:32 EDT" name="Etsy Test Suite" finished-at="2022-07-16T11:21:00 EDT" duration-ms="27575">
+  <suite started-at="2022-07-19T16:02:43 EDT" name="Etsy Test Suite" finished-at="2022-07-19T16:02:48 EDT" duration-ms="5569">
     <groups>
     </groups>
-    <test started-at="2022-07-16T11:20:32 EDT" name="Etsy Web Automation" finished-at="2022-07-16T11:21:00 EDT" duration-ms="27575">
-      <class name="com.etsy.testPages.homePageTest.HomePageTest">
-        <test-method is-config="true" signature="setupAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest@795509d9]" started-at="2022-07-16T11:20:32 EDT" name="setupAutomation" finished-at="2022-07-16T11:20:33 EDT" duration-ms="83" status="PASS">
+    <test started-at="2022-07-19T16:02:43 EDT" name="Etsy Web Automation" finished-at="2022-07-19T16:02:48 EDT" duration-ms="5569">
+      <class name="com.etsy.testPages.homePageTest.HomePageTest2">
+        <test-method is-config="true" signature="setupAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@4b013c76]" started-at="2022-07-19T16:02:43 EDT" name="setupAutomation" finished-at="2022-07-19T16:02:43 EDT" duration-ms="20" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[******************* Automation Started ********************]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setupAutomation -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest@795509d9]" started-at="2022-07-16T11:20:33 EDT" name="setup" finished-at="2022-07-16T11:20:48 EDT" duration-ms="15675" status="PASS">
+        <test-method is-config="true" signature="setup(boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@4b013c76]" started-at="2022-07-19T16:02:43 EDT" name="setup" finished-at="2022-07-19T16:02:48 EDT" duration-ms="5507" status="FAIL">
           <params>
             <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserStack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
-            <param index="1">
+            <param index="5">
+              <value>
+                <![CDATA[103]]>
+              </value>
+            </param>
+            <param index="6">
               <value>
                 <![CDATA[https://www.etsy.com/]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at configuration.common.WebTestBase.setup(WebTestBase.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
             <line>
               <![CDATA[Browser: chrome]]>
@@ -39,15 +123,76 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyFreeShippingFilterWorks()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest@795509d9]" started-at="2022-07-16T11:20:48 EDT" name="verifyFreeShippingFilterWorks" finished-at="2022-07-16T11:21:00 EDT" duration-ms="11670" status="PASS">
+        <test-method signature="verifySearchProductUsingInvalidProduct()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@4b013c76]" started-at="2022-07-19T16:02:48 EDT" name="verifySearchProductUsingInvalidProduct" finished-at="2022-07-19T16:02:48 EDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at configuration.common.WebTestBase.setup(WebTestBase.java:52)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyFreeShippingFilterWorks -->
-        <test-method is-config="true" signature="tearDownAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest@795509d9]" started-at="2022-07-16T11:21:00 EDT" name="tearDownAutomation" finished-at="2022-07-16T11:21:00 EDT" duration-ms="9" status="PASS">
+        </test-method> <!-- verifySearchProductUsingInvalidProduct -->
+        <test-method is-config="true" signature="getInit()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@4b013c76]" started-at="2022-07-19T16:02:48 EDT" name="getInit" finished-at="2022-07-19T16:02:48 EDT" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInit -->
+        <test-method is-config="true" signature="tearDownAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@4b013c76]" started-at="2022-07-19T16:02:48 EDT" name="tearDownAutomation" finished-at="2022-07-19T16:02:48 EDT" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAutomation -->
-      </class> <!-- com.etsy.testPages.homePageTest.HomePageTest -->
+        <test-method is-config="true" signature="tearDownAutomationMessage()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@4b013c76]" started-at="2022-07-19T16:02:48 EDT" name="tearDownAutomationMessage" finished-at="2022-07-19T16:02:48 EDT" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAutomationMessage -->
+      </class> <!-- com.etsy.testPages.homePageTest.HomePageTest2 -->
     </test> <!-- Etsy Web Automation -->
   </suite> <!-- Etsy Test Suite -->
 </testng-results>

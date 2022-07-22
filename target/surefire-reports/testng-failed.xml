@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Etsy Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="useCloudEnv" value="true"/>
+  <parameter name="os" value="windows"/>
+  <parameter name="osVersion" value="10"/>
+  <parameter name="browserVersion" value="103"/>
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="cloudEnvName" value="browserStack"/>
+  <parameter name="url" value="https://www.etsy.com/"/>
+  <test thread-count="5" name="Etsy Web Automation(failed)" verbose="0">
+    <classes>
+      <class name="com.etsy.testPages.homePageTest.HomePageTest2">
+        <methods>
+          <include name="tearDownAutomationMessage"/>
+          <include name="getInit"/>
+          <include name="verifySearchProductUsingInvalidProduct"/>
+          <include name="setupAutomation"/>
+          <include name="tearDownAutomation"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.etsy.testPages.homePageTest.HomePageTest2 -->
+    </classes>
+  </test> <!-- Etsy Web Automation(failed) -->
+</suite> <!-- Failed suite [Etsy Test Suite] -->

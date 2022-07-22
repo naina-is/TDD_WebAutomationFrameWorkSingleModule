@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Etsy_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Etsy Test Suite</span>
+              <span class="suite-name border-skipped">Etsy Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Etsy_Test_Suite" class="hide-methods passed suite-Etsy_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Etsy_Test_Suite -->
-                      <a href="#" panel-name="suite-Etsy_Test_Suite" class="show-methods passed suite-Etsy_Test_Suite"> (show)</a> <!-- show-methods passed suite-Etsy_Test_Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Etsy_Test_Suite" class="hide-methods skipped suite-Etsy_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Etsy_Test_Suite -->
+                      <a href="#" panel-name="suite-Etsy_Test_Suite" class="show-methods skipped suite-Etsy_Test_Suite"> (show)</a> <!-- show-methods skipped suite-Etsy_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Etsy_Test_Suite">
+                    <div class="method-list-content skipped suite-Etsy_Test_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Etsy_Test_Suite" title="com.etsy.testPages.homePageTest.HomePageTest" class="method navigator-link" hash-for-method="verifyFreeShippingFilterWorks">verifyFreeShippingFilterWorks</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Etsy_Test_Suite" title="com.etsy.testPages.homePageTest.HomePageTest2" class="method navigator-link" hash-for-method="verifySearchProductUsingInvalidProduct">verifySearchProductUsingInvalidProduct</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Etsy_Test_Suite -->
+                    </div> <!-- method-list-content skipped suite-Etsy_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,21 +118,33 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Etsy_Test_Suite" class="panel Etsy_Test_Suite">
-          <div class="suite-Etsy_Test_Suite-class-passed">
+          <div class="suite-Etsy_Test_Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.etsy.testPages.homePageTest.HomePageTest</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.etsy.testPages.homePageTest.HomePageTest2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyFreeShippingFilterWorks">
-                  </a> <!-- verifyFreeShippingFilterWorks -->
-                  <span class="method-name">verifyFreeShippingFilterWorks</span>
+                  <a name="verifySearchProductUsingInvalidProduct">
+                  </a> <!-- verifySearchProductUsingInvalidProduct -->
+                  <span class="method-name">verifySearchProductUsingInvalidProduct</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://chromedriver.chromium.org/. The latest version can be downloaded from https://chromedriver.chromium.org/downloads
+	at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:39)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:233)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:128)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:49)
+	at configuration.common.WebTestBase.setup(WebTestBase.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Etsy_Test_Suite-class-passed -->
+          </div> <!-- suite-Etsy_Test_Suite-class-skipped -->
         </div> <!-- panel Etsy_Test_Suite -->
         <div panel-name="test-xml-Etsy_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -143,11 +155,16 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Etsy Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;os&quot; value=&quot;windows&quot;/&gt;
+  &lt;parameter name=&quot;osVersion&quot; value=&quot;10&quot;/&gt;
+  &lt;parameter name=&quot;browserVersion&quot; value=&quot;103&quot;/&gt;
   &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;cloudEnvName&quot; value=&quot;browserStack&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.etsy.com/&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Etsy Web Automation&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.etsy.testPages.homePageTest.HomePageTest&quot;/&gt;
+      &lt;class name=&quot;com.etsy.testPages.homePageTest.HomePageTest2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Etsy Web Automation --&gt;
 &lt;/suite&gt; &lt;!-- Etsy Test Suite --&gt;
@@ -189,14 +206,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFreeShippingFilterWorks')
-data.setCell(0, 2, 'com.etsy.testPages.homePageTest.HomePageTest')
-data.setCell(0, 3, 11670);
+data.setCell(0, 1, 'verifySearchProductUsingInvalidProduct')
+data.setCell(0, 2, 'com.etsy.testPages.homePageTest.HomePageTest2')
+data.setCell(0, 3, 0);
 window.suiteTableData['Etsy_Test_Suite']= { tableData: data, tableDiv: 'times-div-Etsy_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Etsy_Test_Suite">
               </div> <!-- times-div-Etsy_Test_Suite -->
             </div> <!-- times-div -->
@@ -211,9 +228,26 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Etsy_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.etsy.testPages.homePageTest.HomePageTest2</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyFrenchLanguageSettingsChanged</span>
+                <br/>
+                <span class="ignored-method-name">verifyPolishLanguageSettingsChanged</span>
+                <br/>
+                <span class="ignored-method-name">verifyFreeShippingFilterWorks</span>
+                <br/>
+                <span class="ignored-method-name">verifyChineseLanguageSettingsChanged</span>
+                <br/>
+                <span class="ignored-method-name">verifyUnregisteredUserSignedIn</span>
+                <br/>
+                <span class="ignored-method-name">verifyRegisteredUserSignedIn</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Etsy_Test_Suite" class="panel">
@@ -222,23 +256,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.etsy.testPages.homePageTest.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.etsy.testPages.homePageTest.HomePageTest2</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setupAutomation</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(chrome, https://www.etsy.com/)</span>
-                <span class="method-start">155 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(true, browserStack, windows, 10, chrome, 103, https://www.etsy.com/)</span>
+                <span class="method-start">50 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyFreeShippingFilterWorks</span>
-                <span class="method-start">15832 ms</span>
+                <span class="method-name">verifySearchProductUsingInvalidProduct</span>
+                <span class="method-start">5559 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">getInit</span>
+                <span class="method-start">5559 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAutomation</span>
-                <span class="method-start">27516 ms</span>
+                <span class="method-start">5559 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDownAutomationMessage</span>
+                <span class="method-start">5559 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -3,7 +3,13 @@
 <suite name="Etsy Test Suite">
 
 <!--    @Parameters-->
+<!--    to toggle if wanting to use cloud environment: switch false to true -->
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="cloudEnvName" value="browserStack"></parameter>
+    <parameter name="os" value="windows"></parameter>
+    <parameter name="osVersion" value="10"></parameter>
     <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="103"></parameter>
     <parameter name="url" value="https://www.etsy.com/"></parameter>
 
     <test name="Etsy Web Automation">
