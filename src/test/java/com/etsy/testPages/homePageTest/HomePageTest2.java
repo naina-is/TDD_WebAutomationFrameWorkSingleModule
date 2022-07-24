@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import static com.etsy.pageElement.HomePageElements.*;
@@ -20,11 +21,10 @@ public class HomePageTest2 extends WebTestBase {
         homePage2 = PageFactory.initElements(driver,HomePage2.class);
     }
 
-    @Test
+    @Test(enabled = false)
     public static void verifySearchProductUsingInvalidProduct(){
 //        HomePage2 homePage2 = new HomePage2();
-//        homePage2.searchInvalidProduct();
-        homePage2.searchInvalidProduct2();
+        homePage2.searchInvalidProduct();
 //        searchInvalidProduct();
 //        String expectedProductName="We couldn't find any results for 23124MSNADN!!~#@$#";
 //        String expectedProductName="We couldn't find any results for 23124MSNADN!!~#@$";
@@ -32,6 +32,21 @@ public class HomePageTest2 extends WebTestBase {
 //        printLog("Actual Result: " + actualProductName);
 //        printLog("Expected Result: " + expectedProductName);
 //        Assert.assertEquals(actualProductName,expectedProductName,"Product name matches successfully");
+    }
+
+    @Test @Ignore
+    public static void verifySearchProductUsingInvalidProductFromDirectArray() {
+//        HomePage2 homePage2 = new HomePage2();
+//        homePage2.searchInvalidProduct();
+        homePage2.searchInvalidProduct2();
+    }
+    @Test @Ignore
+    public static void verifySearchProductUsingInvalidProductFromExcel() throws Exception {
+        homePage2.searchInvalidProduct3();
+    }
+    @Test
+    public static void verifySearchProductUsingInvalidProductFromDataProvider() throws Exception {
+        homePage2.searchInvalidProduct5();
     }
 
     @Test(enabled = false)

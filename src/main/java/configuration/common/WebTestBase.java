@@ -29,6 +29,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import configuration.reporting.ExtentManager;
 import configuration.reporting.ExtentTestManager;
+import configuration.utilities.ReadProperties;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.OutputType;
@@ -56,17 +57,22 @@ import java.time.Duration;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Properties;
 
 public class WebTestBase {
 //    Create driver
     public static WebDriver driver;
 
+//    read properties
+static Properties readProperty = ReadProperties.loadProperties("src/main/resources/config.properties");
+//    String getBrowserStackUserName=readProperty.getProperty("BROWSERSTACK_USERNAME");
 //    Credentials for cloud environments
 //    Temp Email for BrowserStack: hicarow810@runfons.com and pass: Test1234
 //    Temp Email for SauceLabs: hicarow810@runfons.com and Username:hicarow810 and pass: Test1234!
     public static final String BROWSERSTACK_USERNAME = "demow_swyINW";
     public static final String BROWSERSTACK_ACCESS_KEY = "sACtMguV8sBJyotVDtQE";
-    public static final String BROWSERSTACK_URL = "https://" + BROWSERSTACK_USERNAME + ":" + BROWSERSTACK_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
+//    public static final String BROWSERSTACK_URL = "https://" + BROWSERSTACK_USERNAME + ":" + BROWSERSTACK_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
+    public static final String BROWSERSTACK_URL = "https://" + readProperty.getProperty("BROWSERSTACK_USERNAME") + ":" + readProperty.getProperty("BROWSERSTACK_ACCESS_KEY") + "@hub-cloud.browserstack.com/wd/hub";
 
     public static final String SAUCELABS_USERNAME = "hicarow810";
     public static final String SAUCELABS_ACCESS_KEY = "24474fb3-c57e-4325-b83b-6223efd9e75c";
@@ -263,6 +269,8 @@ public class WebTestBase {
         return driver;
     }
 
-
+public static void waitFor(int seconds) throws InterruptedException {
+        Thread.sleep(1000*seconds);
+}
 
 }

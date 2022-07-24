@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class ReadExcelDataDrivenApproach {
-    public static String filePath = "../TDD_WebAutomationFrameworkSingleModule_QE_Winter2022/DataTest/RegistrationDataFromExcel.xlsx";
+    public static String filePath = "../TDD_WebAutomationFrameWorkSingleModule/DataTest/RegistrationDataFromExcel.xlsx";
     public static File file = new File(filePath);
     public static FileInputStream inputStream;
     public static XSSFWorkbook workbook;
