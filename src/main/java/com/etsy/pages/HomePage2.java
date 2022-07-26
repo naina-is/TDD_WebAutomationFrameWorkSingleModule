@@ -129,11 +129,9 @@ public class HomePage2 extends WebTestBase {
     //    Modern Approach: @FindBy with how
 //    @FindBy() public WebElement variableName
     @FindBy(how = How.XPATH,using = searchBoxWebElement) public static WebElement searchBox;
-
     //    Modern Approach: @FindBy
     @FindBy(xpath = searchBoxWebElement) public WebElement searchBox1;
     @FindBy(xpath = searchButtonWebElement) public static WebElement searchButton;
-
     public void searchInvalidProduct(){
         searchBox.sendKeys("23124MSNADN!!~#@$#");
         searchButton.click();

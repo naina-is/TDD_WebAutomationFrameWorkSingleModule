@@ -18,7 +18,8 @@
 
 <!--            <class name="com.etsy.testPages.homePageTest.HomePageTest"/>-->
 <!--            <class name="com.etsy.testPages.homePageTest.HomePageTest1"/>-->
-            <class name="com.etsy.testPages.homePageTest.HomePageTest2"/>
+<!--            <class name="com.etsy.testPages.homePageTest.HomePageTest2"/>-->
+            <class name="com.etsy.testPages.homePageTest.HomePageNewTest"/>
 <!--            <class name="com.etsy.testPages.registrationPageTest.RegistrationPageTest"/>-->
 
         </classes>

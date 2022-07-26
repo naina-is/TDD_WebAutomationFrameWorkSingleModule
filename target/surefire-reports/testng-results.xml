@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Extent Report DirectoryC:\Users\islam\IdeaProjects\TDD_WebAutomationFrameWorkSingleModule\target\surefire-reports\html]]>
@@ -17,16 +17,16 @@
       <![CDATA[******************* Automation Ended ********************]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-07-24T14:23:08 EDT" name="Etsy Test Suite" finished-at="2022-07-24T14:23:26 EDT" duration-ms="18771">
+  <suite started-at="2022-07-25T23:08:36 EDT" name="Etsy Test Suite" finished-at="2022-07-25T23:08:54 EDT" duration-ms="17667">
     <groups>
     </groups>
-    <test started-at="2022-07-24T14:23:08 EDT" name="Etsy Web Automation" finished-at="2022-07-24T14:23:26 EDT" duration-ms="18771">
-      <class name="com.etsy.testPages.homePageTest.HomePageTest2">
-        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:07 EDT" name="extentSetup" finished-at="2022-07-24T14:23:08 EDT" duration-ms="353" status="PASS">
+    <test started-at="2022-07-25T23:08:36 EDT" name="Etsy Web Automation" finished-at="2022-07-25T23:08:54 EDT" duration-ms="17667">
+      <class name="com.etsy.testPages.homePageTest.HomePageNewTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:36 EDT" name="extentSetup" finished-at="2022-07-25T23:08:36 EDT" duration-ms="350" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7fb66650]]>
+                <![CDATA[org.testng.TestRunner@6d11ceef]]>
               </value>
             </param>
           </params>
@@ -36,14 +36,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method is-config="true" signature="setupAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:08 EDT" name="setupAutomation" finished-at="2022-07-24T14:23:08 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:36 EDT" name="setupAutomation" finished-at="2022-07-25T23:08:36 EDT" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[******************* Automation Started ********************]]>
             </line>
           </reporter-output>
         </test-method> <!-- setupAutomation -->
-        <test-method is-config="true" signature="setup(boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:08 EDT" name="setup" finished-at="2022-07-24T14:23:17 EDT" duration-ms="9366" status="PASS">
+        <test-method is-config="true" signature="setup(boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:36 EDT" name="setup" finished-at="2022-07-25T23:08:44 EDT" duration-ms="8262" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,52 +90,48 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:17 EDT" name="startExtent" finished-at="2022-07-24T14:23:17 EDT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:44 EDT" name="startExtent" finished-at="2022-07-25T23:08:44 EDT" duration-ms="29" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public static void com.etsy.testPages.homePageTest.HomePageTest2.verifySearchProductUsingInvalidProduct()]]>
+                <![CDATA[public void com.etsy.testPages.homePageTest.HomePageNewTest.verifySearchInvalidProduct()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method is-config="true" signature="getInit()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:17 EDT" name="getInit" finished-at="2022-07-24T14:23:17 EDT" duration-ms="97" status="PASS">
+        <test-method signature="verifySearchInvalidProduct()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:44 EDT" name="verifySearchInvalidProduct" finished-at="2022-07-25T23:08:48 EDT" duration-ms="3254" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getInit -->
-        <test-method signature="verifySearchProductUsingInvalidProduct()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:17 EDT" name="verifySearchProductUsingInvalidProduct" finished-at="2022-07-24T14:23:20 EDT" duration-ms="3090" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchProductUsingInvalidProduct -->
-        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:20 EDT" name="afterEachTestMethod" finished-at="2022-07-24T14:23:21 EDT" duration-ms="630" status="PASS">
+        </test-method> <!-- verifySearchInvalidProduct -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:48 EDT" name="afterEachTestMethod" finished-at="2022-07-25T23:08:48 EDT" duration-ms="585" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySearchProductUsingInvalidProduct status=SUCCESS method=HomePageTest2.verifySearchProductUsingInvalidProduct()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c] output={null}]]]>
+                <![CDATA[[TestResult name=verifySearchInvalidProduct status=SUCCESS method=HomePageNewTest.verifySearchInvalidProduct()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method is-config="true" signature="tearDownAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:21 EDT" name="tearDownAutomation" finished-at="2022-07-24T14:23:26 EDT" duration-ms="5478" status="PASS">
+        <test-method is-config="true" signature="tearDownAutomation()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:48 EDT" name="tearDownAutomation" finished-at="2022-07-25T23:08:54 EDT" duration-ms="5448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAutomation -->
-        <test-method is-config="true" signature="tearDownAutomationMessage()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:26 EDT" name="tearDownAutomationMessage" finished-at="2022-07-24T14:23:26 EDT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="tearDownAutomationMessage()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:54 EDT" name="tearDownAutomationMessage" finished-at="2022-07-25T23:08:54 EDT" duration-ms="2" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[******************* Automation Ended ********************]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDownAutomationMessage -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageTest2@2767e23c]" started-at="2022-07-24T14:23:27 EDT" name="generateReport" finished-at="2022-07-24T14:23:27 EDT" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.etsy.testPages.homePageTest.HomePageNewTest@3f191845]" started-at="2022-07-25T23:08:54 EDT" name="generateReport" finished-at="2022-07-25T23:08:54 EDT" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.etsy.testPages.homePageTest.HomePageTest2 -->
+      </class> <!-- com.etsy.testPages.homePageTest.HomePageNewTest -->
     </test> <!-- Etsy Web Automation -->
   </suite> <!-- Etsy Test Suite -->
 </testng-results>

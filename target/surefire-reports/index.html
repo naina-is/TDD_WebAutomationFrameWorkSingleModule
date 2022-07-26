@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Etsy_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Etsy_Test_Suite" title="com.etsy.testPages.homePageTest.HomePageTest2" class="method navigator-link" hash-for-method="verifySearchProductUsingInvalidProduct">verifySearchProductUsingInvalidProduct</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Etsy_Test_Suite" title="com.etsy.testPages.homePageTest.HomePageNewTest" class="method navigator-link" hash-for-method="verifySearchInvalidProduct">verifySearchInvalidProduct</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Etsy_Test_Suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Etsy_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.etsy.testPages.homePageTest.HomePageTest2</span>
+              <span class="class-name">com.etsy.testPages.homePageTest.HomePageNewTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySearchProductUsingInvalidProduct">
-                  </a> <!-- verifySearchProductUsingInvalidProduct -->
-                  <span class="method-name">verifySearchProductUsingInvalidProduct</span>
+                  <a name="verifySearchInvalidProduct">
+                  </a> <!-- verifySearchInvalidProduct -->
+                  <span class="method-name">verifySearchInvalidProduct</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -152,7 +152,7 @@
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.etsy.com/&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Etsy Web Automation&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.etsy.testPages.homePageTest.HomePageTest2&quot;/&gt;
+      &lt;class name=&quot;com.etsy.testPages.homePageTest.HomePageNewTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Etsy Web Automation --&gt;
 &lt;/suite&gt; &lt;!-- Etsy Test Suite --&gt;
@@ -194,9 +194,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySearchProductUsingInvalidProduct')
-data.setCell(0, 2, 'com.etsy.testPages.homePageTest.HomePageTest2')
-data.setCell(0, 3, 3090);
+data.setCell(0, 1, 'verifySearchInvalidProduct')
+data.setCell(0, 2, 'com.etsy.testPages.homePageTest.HomePageNewTest')
+data.setCell(0, 3, 3254);
 window.suiteTableData['Etsy_Test_Suite']= { tableData: data, tableDiv: 'times-div-Etsy_Test_Suite'}
 return data;
 }
@@ -216,32 +216,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Etsy_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.etsy.testPages.homePageTest.HomePageTest2</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyFrenchLanguageSettingsChanged</span>
-                <br/>
-                <span class="ignored-method-name">verifyChineseLanguageSettingsChanged</span>
-                <br/>
-                <span class="ignored-method-name">verifySearchProductUsingInvalidProductFromExcel</span>
-                <br/>
-                <span class="ignored-method-name">verifyFreeShippingFilterWorks</span>
-                <br/>
-                <span class="ignored-method-name">verifyUnregisteredUserSignedIn</span>
-                <br/>
-                <span class="ignored-method-name">verifyPolishLanguageSettingsChanged</span>
-                <br/>
-                <span class="ignored-method-name">verifySearchProductUsingInvalidProductFromDirectArray</span>
-                <br/>
-                <span class="ignored-method-name">verifyRegisteredUserSignedIn</span>
-                <br/>
-                <span class="ignored-method-name">verifySearchProductUsingInvalidProductFromDataProvider</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Etsy_Test_Suite" class="panel">
@@ -250,46 +227,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.etsy.testPages.homePageTest.HomePageTest2</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.etsy.testPages.homePageTest.HomePageNewTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@7fb66650)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@6d11ceef)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setupAutomation</span>
-                <span class="method-start">385 ms</span>
+                <span class="method-start">375 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setup(false, browserStack, windows, 10, chrome, 103, https://www.etsy.com/)</span>
-                <span class="method-start">437 ms</span>
+                <span class="method-start">420 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startExtent(public static void com.etsy.testPages.homePageTest.HomePageTest2.verifySearchProductUsingInvalidProd...)</span>
-                <span class="method-start">9803 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">getInit</span>
-                <span class="method-start">9809 ms</span>
+                <span class="method-name">startExtent(public void com.etsy.testPages.homePageTest.HomePageNewTest.verifySearchInvalidProduct())</span>
+                <span class="method-start">8684 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifySearchProductUsingInvalidProduct</span>
-                <span class="method-start">9906 ms</span>
+                <span class="method-name">verifySearchInvalidProduct</span>
+                <span class="method-start">8715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchProductUsingInvalidProduct status=SUCCESS method=HomePageTest2.verifySe...)</span>
-                <span class="method-start">12999 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=verifySearchInvalidProduct status=SUCCESS method=HomePageNewTest.verifySearchInvali...)</span>
+                <span class="method-start">11971 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownAutomation</span>
-                <span class="method-start">13631 ms</span>
+                <span class="method-start">12556 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDownAutomationMessage</span>
-                <span class="method-start">19123 ms</span>
+                <span class="method-start">18021 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">19362 ms</span>
+                <span class="method-start">18174 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
