@@ -21,7 +21,7 @@ public class HomePageTest2 extends WebTestBase {
         homePage2 = PageFactory.initElements(driver,HomePage2.class);
     }
 
-    @Test(enabled = false)
+    @Test @Ignore
     public static void verifySearchProductUsingInvalidProduct(){
 //        HomePage2 homePage2 = new HomePage2();
         homePage2.searchInvalidProduct();
@@ -44,12 +44,16 @@ public class HomePageTest2 extends WebTestBase {
     public static void verifySearchProductUsingInvalidProductFromExcel() throws Exception {
         homePage2.searchInvalidProduct3();
     }
-    @Test
+
+    @Test(dataProvider = "RegistrationDataFromExcel") @Ignore
     public static void verifySearchProductUsingInvalidProductFromDataProvider() throws Exception {
         homePage2.searchInvalidProduct5();
     }
 
-    @Test(enabled = false)
+
+
+
+    @Test(enabled = false) @Ignore
     public static void verifyRegisteredUserSignedIn() throws InterruptedException {
         homePage2.SignInValidUser();
         String actualWelcomeMessage = driver.findElement(By.cssSelector(verifyRegisteredUserSignedInWelcomeMessage)).getText();

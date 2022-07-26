@@ -32,7 +32,7 @@ public class ConnectToSqlDB {
     public static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
         //InputStream ism = new FileInputStream("/secret.properties");
-        InputStream ism = new FileInputStream("src/main/java/configuration/databases/secret.properties");
+        InputStream ism = new FileInputStream("src/main/resources/config.properties");
         prop.load(ism);
         ism.close();
         return prop;

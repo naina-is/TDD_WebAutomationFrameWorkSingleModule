@@ -30,6 +30,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import configuration.reporting.ExtentManager;
 import configuration.reporting.ExtentTestManager;
 import configuration.utilities.ReadProperties;
+import configuration.utilities.ReadSystemProperties;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.OutputType;
@@ -83,6 +84,7 @@ static Properties readProperty = ReadProperties.loadProperties("src/main/resourc
         printLog("******************* Automation Started ********************");
     }
 
+
     @Parameters({"useCloudEnv","cloudEnvName","os","osVersion","browserName","browserVersion","url"})
     @BeforeMethod
     public void setup(@Optional("false") boolean useCloudEnv,@Optional("sauceLabs") String cloudEnvName,@Optional("OS X") String os,@Optional("Big Sur") String osVersion,@Optional("chrome") String browserName,@Optional("100") String browserVersion,@Optional("https://www.google.com") String url) throws MalformedURLException {
@@ -97,12 +99,45 @@ static Properties readProperty = ReadProperties.loadProperties("src/main/resourc
         printLog("Browser: " + browserName);
         printLog("URL: " + url);
 //        driver = new ChromeDriver();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); //wait up to 30sec if there are network,software, other issues etc.
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.manage().deleteAllCookies();
 //        opens etsy homepage on chrome
         driver.get(url);
     }
+
+
+//    /**
+//     * This method retrieves the url from the config.properties file to automate etsy.com
+//     * This method will accept urls based on environment from the command line during the execution
+//     * @param useCloudEnv
+//     * @param cloudEnvName
+//     * @param os
+//     * @param osVersion
+//     * @param browserName
+//     * @param browserVersion
+//     * @throws MalformedURLException
+//     */
+//    @Parameters({"useCloudEnv","cloudEnvName","os","osVersion","browserName","browserVersion"})
+//    @BeforeMethod
+//    public void setup(@Optional("false") boolean useCloudEnv,@Optional("sauceLabs") String cloudEnvName,@Optional("OS X") String os,@Optional("Big Sur") String osVersion,@Optional("chrome") String browserName,@Optional("100") String browserVersion) throws MalformedURLException {
+//        if(useCloudEnv){
+//            if (cloudEnvName.equalsIgnoreCase("browserStack") || (cloudEnvName.equalsIgnoreCase("sauceLabs"))) {
+//                getCloudDriver(cloudEnvName, os, osVersion, browserName, browserVersion);
+//            }
+//        } else {
+//            getLocalDriver(os,browserName);
+//        }
+//
+//        printLog("Browser: " + browserName);
+//        printLog("URL: " + ReadSystemProperties.getEnvUrl());
+////        driver = new ChromeDriver();
+////        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+////        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+//        driver.manage().deleteAllCookies();
+////        opens etsy homepage on chrome
+//        driver.get(ReadSystemProperties.getEnvUrl());
+//    }
 
     public static String captureScreenshotWithPath(WebDriver driver, String screenShotName){
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -221,11 +256,14 @@ static Properties readProperty = ReadProperties.loadProperties("src/main/resourc
 
     public WebDriver getLocalDriver(String os, String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            if (os.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/BrowserDriver/Windows/chromedriver");
-            } else if (os.equalsIgnoreCase("windows")) {
+//            if (os.equalsIgnoreCase("OS X")){
+////                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/BrowserDriver/Mac/chromedriver");
+//            } else if (os.equalsIgnoreCase("windows")) {
+//                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/BrowserDriver/Windows/chromedriver.exe");
+//            }
+//            if (os.equalsIgnoreCase("windows")) {
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/BrowserDriver/Windows/chromedriver.exe");
-            }
+//            }
             driver= new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("chrome-options")) {
             ChromeOptions options = new ChromeOptions();
